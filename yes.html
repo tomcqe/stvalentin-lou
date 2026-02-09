@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>ABSOLUTE CINEMA 🎬</title>
+  <title>Je t’aime ❤️</title>
   <style>
     body {
       margin: 0;
@@ -19,43 +19,34 @@
 
     .message {
       background: rgba(255,255,255,0.3);
-      padding: 35px;
+      padding: 40px;
       border-radius: 20px;
-      max-width: 460px;
+      max-width: 420px;
       z-index: 2;
-      animation: bounce 0.8s infinite;
+      animation: bounce 1s infinite;
     }
 
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
+      50% { transform: translateY(-10px); }
     }
 
     h1 {
-      font-size: 2.2em;
-      color: #ffe600;
-      text-shadow: 2px 2px 6px #ff0000;
+      font-size: 2.1em;
+      color: #fff0f5;
     }
 
     p {
-      font-size: 1.2em;
-      line-height: 1.4;
+      font-size: 1.25em;
+      line-height: 1.5;
     }
 
-    img {
-      width: 100%;
-      border-radius: 15px;
-      margin: 20px 0;
-    }
-
-    .heart, .confetti {
+    .heart {
       position: absolute;
+      font-size: 26px;
       animation: fall linear infinite;
       user-select: none;
     }
-
-    .heart { font-size: 26px; }
-    .confetti { width: 10px; height: 10px; }
 
     @keyframes fall {
       from { transform: translateY(-10vh); opacity: 1; }
@@ -69,20 +60,12 @@
     <h1>JE SUIS PÉTARD LETSGOOOOO 💖</h1>
 
     <p>
-      Lou tu as dit oui ❤️<br>
-      Je suis trop content.<br>
-      Vraiment heureux.
+      Lou ❤️<br>
+      Je suis vraiment très heureux.<br>
+      Je t’aime mon cœur.
     </p>
 
-    <p>
-      Je t’aime mon cœur ❤️<br>
-      à très vite !!!
-    </p>
-
-    <img src="https://megapedia.fandom.com/wiki/Absolute_Cinema"
-         alt="Absolute cinema meme">
-
-    <p><strong>ABSOLUTE CINEMA 🎬</strong></p>
+    <p>À très vite ❤️</p>
   </div>
 
   <script>
@@ -96,21 +79,10 @@
       setTimeout(() => h.remove(), 5000);
     }
 
-    function createConfetti() {
-      const c = document.createElement("div");
-      c.className = "confetti";
-      c.style.left = Math.random() * 100 + "vw";
-      c.style.backgroundColor =
-        `hsl(${Math.random() * 360}, 100%, 50%)`;
-      c.style.animationDuration = (2 + Math.random() * 3) + "s";
-      document.body.appendChild(c);
-      setTimeout(() => c.remove(), 5000);
-    }
-
-    setInterval(createHeart, 180);
-    setInterval(createConfetti, 120);
+    setInterval(createHeart, 200);
   </script>
 
 </body>
 </html>
+
 
