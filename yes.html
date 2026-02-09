@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>ABSOLUT CINÉMA 🎬</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .message {
+      background: rgba(255,255,255,0.3);
+      padding: 35px;
+      border-radius: 20px;
+      max-width: 450px;
+      z-index: 2;
+      animation: bounce 0.8s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    h1 {
+      font-size: 2.2em;
+      color: #ffe600;
+      text-shadow: 2px 2px 6px #ff0000;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    .heart, .confetti {
+      position: absolute;
+      animation: fall linear infinite;
+      user-select: none;
+    }
+
+    .heart { font-size: 26px; }
+    .confetti { width: 10px; height: 10px; }
+
+    @keyframes fall {
+      from { transform: translateY(-10vh); opacity: 1; }
+      to { transform: translateY(110vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay>
+    <source src="https://www.soundjay.com/human/sounds/applause-8.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="message">
+    <h1>JE SUIS PÉTARD LETSGOOOOO 💖</h1>
+
+    <p>
+      Lou tu as dit oui ❤️<br>
+      Je suis trop content.<br>
+      Vraiment heureux.
+    </p>
+
+    <p>
+      Je t’aime mon cœur ❤️<br>
+      à très vite !!!
+    </p>
+
+    <img src="https://i.imgflip.com/7x0q8k.jpg" alt="Absolut cinema meme">
+
+    <p><strong>ABSOLUT CINÉMA 🎬</strong></p>
+  </div>
+
+  <script>
+    function createHeart() {
+      const h = document.createElement("div");
+      h.className = "heart";
+      h.innerHTML = "💖";
+      h.style.left = Math.random() * 100 + "vw";
+      h.style.animationDuration = (2 + Math.random() * 3) + "s";
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 5000);
+    }
+
+    function createConfetti() {
+      const c = document.createElement("div");
+      c.className = "confetti";
+      c.style.left = Math.random() * 100 + "vw";
+      c.style.backgroundColor =
+        `hsl(${Math.random() * 360}, 100%, 50%)`;
+      c.style.animationDuration = (2 + Math.random() * 3) + "s";
+      document.body.appendChild(c);
+      setTimeout(() => c.remove(), 5000);
+    }
+
+    setInterval(createHeart, 180);
+    setInterval(createConfetti, 120);
+  </script>
+
+</body>
+</html>
